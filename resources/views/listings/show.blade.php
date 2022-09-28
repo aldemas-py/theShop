@@ -20,15 +20,15 @@
                 <div class="border border-gray-200 w-full mb-6"></div>
                 <div>
                     <h3 class="text-3xl font-bold mb-4">
-                        Job Description
+                        Item Description
                     </h3>
                     <div class="text-lg space-y-6">
                         {{ $listing->description }}
 
-                        <a href="mailto:{{ $listing->email }}"
+                        <a href=" https://wa.me/254712414196"
                             class="block bg-laravel text-white mt-6 py-2 rounded-xl hover:opacity-80"><i
-                                class="fa-solid fa-envelope"></i>
-                            Contact Employer</a>
+                                class="fa-brands fa-whatsapp"></i>
+                            Contact Owner</a>
 
                         {{-- <a href="{{ $listing->website }}" target="_blank"
                             class="block bg-black text-white py-2 rounded-xl hover:opacity-80"><i
