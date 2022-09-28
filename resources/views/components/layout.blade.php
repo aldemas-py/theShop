@@ -27,23 +27,26 @@
 </head>
 
 <body class="mb-48">
-    <nav class="flex justify-between items-center mb-4">
-        <a href="/"><img class="w-24" src="{{ asset('images/logo.png') }}" alt="" class="logo" /></a>
-        <ul class="flex space-x-6 mr-6 text-lg">
-            @auth
+    <nav class="flex justify-between items-center mb-4 bg-laravel">
+        <a href="/"><img class="w-24" src="{{ asset('images/lg.jpg') }}" alt="" class="logo" /></a>
+        <h3 class="text-3xl font-bold mb-4">
+            Welcome
+        </h3>
+        @auth
+            <ul class="flex space-x-6 mr-6 text-lg">
                 <li>
                     <span class="font-bold uppercase">
                         Welcome {{ auth()->user()->name }}
                     </span>
                 </li>
                 <li>
-                    <a href="/listings/manage" class="hover:text-laravel"><i class="fa-solid fa-gear"></i>
+                    <a href="/listings/manage" class="hover:text-white"><i class="fa-solid fa-gear"></i>
                         Manage Listings</a>
                 </li>
                 <li>
                     <form class="inline" action="/logout" method="POST">
                         @csrf
-                        <button type="submit">
+                        <button type="submit" class="hover:text-white">
                             <i class="fa-solid fa-door-closed"></i>
                             Logout</button>
                     </form>
@@ -56,9 +59,13 @@
                     <a href="/login" class="hover:text-laravel"><i class="fa-solid fa-arrow-right-to-bracket"></i>
                         Login</a>
                 </li> --}}
-            @endauth
+            </ul>
+        @else
+            <h3 class="text-3xl font-bold mb-4">
+                {{-- Welcome --}}
+            </h3>
+        @endauth
 
-        </ul>
     </nav>
     {{-- VIEW OUTPUT --}}
     <main>
